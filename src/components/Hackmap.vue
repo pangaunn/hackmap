@@ -32,7 +32,7 @@ let githubIssue
 export default {
   name: 'hackmap',
   props: {
-    issueId: {
+    issueNumber: {
       default: '',
       type: String
     }
@@ -181,7 +181,8 @@ export default {
       onUserAuthenticated: response => {
         this.username = response.data.login
         this.userId = response.data.id
-      }
+      },
+      issueNumber: this.issueNumber
     })
     // we need to calculate map dimensions in order to place the avatars
     // we handle three cases:

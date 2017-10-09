@@ -5,6 +5,7 @@ import Hackmap from '@/components/Hackmap'
 Vue.use(Router)
 
 export default new Router({
+  mode: 'history',
   routes: [
     {
       path: '/',
@@ -12,7 +13,7 @@ export default new Router({
       component: Hackmap
     },
     {
-      path: '/:issueId',
+      path: '/:issueNumber',
       name: 'history',
       component: Hackmap,
       props: true
