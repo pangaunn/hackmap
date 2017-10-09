@@ -35,6 +35,7 @@ export default class GitHubIssueService {
         if (!issueResponse.data.length) {
           throw new Error('Could not find an open issue labeled: ' + this.config.label)
         }
+        console.log(issueResponse)
         var issue = issueResponse.data[0]
         config.onHelpText(issue.body)
         this.issueNumber = issue.number
